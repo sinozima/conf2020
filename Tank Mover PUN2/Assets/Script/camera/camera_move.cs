@@ -54,7 +54,7 @@ public class camera_move : MonoBehaviour
             {
                 target_tank.GetComponent<tank_health>().destory();
 
-                room_make.tank_make();
+                room_make.restart();
             }
         }
     }

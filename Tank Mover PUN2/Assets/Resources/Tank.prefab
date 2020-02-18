@@ -614,8 +614,8 @@ MonoBehaviour:
   tankhealth_slider: {fileID: 3401102100783963314}
   PhotonView: {fileID: 114660215287022040}
   tankhealth_image: {fileID: 6038414954826722210}
-  m_ZeroHealthColor: {r: 0.8784314, g: 0.12941177, b: 0.12941177, a: 0.78431374}
-  m_FullHealthColor: {r: 0.13333334, g: 0.9254902, b: 0.13333334, a: 0.78431374}
+  m_ZeroHealthColor: {r: 0.8784314, g: 0.12941177, b: 0.12941177, a: 0.9411765}
+  m_FullHealthColor: {r: 0.13333334, g: 0.9254902, b: 0.13333334, a: 0.9411765}
 --- !u!114 &7047636241518776462
 MonoBehaviour:
   m_ObjectHideFlags: 0

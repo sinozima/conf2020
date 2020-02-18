@@ -28,7 +28,7 @@ public class shell : MonoBehaviour
             
             if (attack_time == 0)
             {
-                other.gameObject.GetComponent<tank_health>().take_damage(10);
+                other.gameObject.GetComponent<tank_health>().take_damage(30);
                 Destroy(this.gameObject);
             }
         }

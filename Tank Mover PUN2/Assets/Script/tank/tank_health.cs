@@ -19,6 +19,10 @@ public class tank_health : MonoBehaviour
         health = 100;
         tankhealth_slider.value = 100;
         tankhealth_image.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, 100 / 100f);
+        if(PhotonView.IsMine == true)
+        {
+            tankhealth_slider.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

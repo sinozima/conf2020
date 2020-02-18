@@ -13,11 +13,13 @@ public class room_make : MonoBehaviourPunCallbacks
     public GameObject namesetUI;
     public InputField name_field;
     public GameObject tankhealthUI;
+    public Text name_text;
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
         namesetUI.gameObject.SetActive(false);
         tankhealthUI.gameObject.SetActive(false);
+        name_text.gameObject.SetActive(false);
     }
 
     public override void OnConnectedToMaster()
@@ -35,12 +37,22 @@ public class room_make : MonoBehaviourPunCallbacks
         tank_make();
 
         tankhealthUI.gameObject.SetActive(true);
+        name_text.gameObject.SetActive(true);
+        name_text.text = name_field.text;
     }
     public void SetPlayerName(string field_name)
     {
         name = name_field.text;
     }
+    public void restart()
+    {
+        PhotonNetwork.ConnectUsingSettings();
+        namesetUI.gameObject.SetActive(false);
+        tankhealthUI.gameObject.SetActive(false);
+        name_text.gameObject.SetActive(false);
 
+        namesetUI.gameObject.SetActive(true);
+    }
     public void tank_make()
     {
         camera_move.target_tank = PhotonNetwork.Instantiate("Tank", new Vector3(Random.Range(-3f, 3f),2f, Random.Range(-3f, 3f)), Quaternion.identity);
